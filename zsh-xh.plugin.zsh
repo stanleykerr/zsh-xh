@@ -9,10 +9,14 @@ if ! (( $+commands[$TARGET_CMD] )); then
   return
 fi
 
-# Completions directory for `mise` command
+# Completions directory for `xh` command
 local COMPLETIONS_DIR="${0:A:h}/completions"
 local COMPLETIONS_FILE="$COMPLETIONS_DIR/_$TARGET_CMD"
 
+# Ensure the completions directory exists before using it
+if [[ ! -d "$COMPLETIONS_DIR" ]]; then
+  mkdir -p -- "$COMPLETIONS_DIR" || return
+fi
 # Add completions to the FPATH
 typeset -TUx FPATH fpath
 fpath=("$COMPLETIONS_DIR" $fpath)

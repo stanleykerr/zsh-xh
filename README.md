@@ -27,7 +27,7 @@ antidote use stanleykerr/zsh-xh
 ### Option 2: Add to `~/.zsh_plugins.txt`
 
 ```sh
-# Add the following line to your .zsh_plugins.txt file before completion plugins like zsh-users/zsh-completions or mattmc3/zephyr's completion plugin
+# Add the following line to your `.zsh_plugins.txt` file before completion plugins like `zsh-users/zsh-completions`, `mattmc3/zephyr`'s completion plugin, or similar
 stanleykerr/zsh-xh
 ```
 
